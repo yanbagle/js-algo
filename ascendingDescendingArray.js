@@ -36,3 +36,4 @@ function sortAscendingDescendingArray(arr) {
     return ascendingArr;
     
 }
+
