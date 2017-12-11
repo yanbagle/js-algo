@@ -1,5 +1,5 @@
 function isPermutationPalindrome (str) {
-  if (str === null || str === undefined) {
+  if (!str) {
       return '';
   }
   
@@ -28,4 +28,8 @@ function isPermutationPalindrome (str) {
   return true;
 }
 
-console.log(isPermutationPalindrome('taco cat'));
+var yo = isPermutationPalindrome('taco cat');
+
+window.onload = function() {
+    document.getElementById('console').innerHTML = yo;
+};
