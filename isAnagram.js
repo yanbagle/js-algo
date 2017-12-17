@@ -31,16 +31,21 @@ function isAnagram(str1, str2) {
             return false;
         }
     }
-    
+
     // checking equality freq2 to freq1
     for (let char in freq2) {
         if (freq1[char] !== freq2[char]) {
             return false;
         }
     }
-    
+
+
     return true;
     
 }
 
-console.log(isAnagram('abcde', 'edcba'));
+var yo = isAnagram('abcd','cbda');
+
+window.onload = function() {
+    document.getElementById('console').innerHTML = yo;
+};
