@@ -15,7 +15,7 @@ function reverseVowels(str) {
     if (!str) {
         return null;
     }
-    
+
     var vowels = {
       a: 'a',
       e: 'e',
