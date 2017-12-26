@@ -28,7 +28,7 @@ function flattenObj (obj, flattenObject) {
                 For objects and arrays, JS passes by reference...kind of
 
                 *Via Stackoverflow*
-                
+
                 Javascript is always pass by value, but when a variable refers to an object (including arrays),
                 the "value" is a reference to the object.
                 Changing the value of a variable never changes the underlying primitive or object,
