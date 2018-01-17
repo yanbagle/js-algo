@@ -3,7 +3,6 @@ function rotateLinkedList (linkedList, count) {
         return null;
     }
 
-
     let current = linkedList;
 
     while (count > 1 && current) {
