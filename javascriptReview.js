@@ -22,3 +22,23 @@ let obj2 = {c: 3, d: 4};
 
 let mergedObj =  {...obj1, ...obj2};
 console.log(mergedObj);
+
+console.log('///////////////////////////////////////////////');
+
+var add = function(x) {
+    return function(y) { return x + y; };
+}
+
+var a = add(2)(3); //5
+console.log(a);
+
+console.log('///////////////////////////////////////////////');
+
+let person = {name: 'a'};
+let person2 = person;
+
+person.name = 'b';
+
+console.log(person2.name); // b
+
+console.log('///////////////////////////////////////////////');
