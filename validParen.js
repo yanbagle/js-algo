@@ -20,7 +20,7 @@ function validParen(str) {
         // if it's an open paren
         if (validInput[char]) {
             stack.push(char);
-        } else if (stack.length !== 0 && validInput[stack.pop()] === char) { // closed paren
+        } else if (stack.length !== 0 && validInput[stack.pop()] !== char) { // closed paren
             return false;
         }
     }

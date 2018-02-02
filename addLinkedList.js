@@ -33,6 +33,10 @@ function addLinkedList(n1, n2) {
         resultNode.next = new LLNode(total);
         resultNode = resultNode.next;
     }
+
+	if (carry) {
+		resultNode.next = new LLNode(carry);
+	}
     
     return head.next;
 } 

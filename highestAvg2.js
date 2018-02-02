@@ -15,14 +15,20 @@ function highestAvg2 (avg) {
     var studentsTestScores = {};
 
     for (let scoreObj of avg) {
-        for (let student in scoreObj) {
-            if (studentsTestScores[student]) {
-                studentsTestScores[student].push(scoreObj[student]);
-            } else {
-                studentsTestScores[student] = [scoreObj[student]];
-            }
-        }
+        const currStudent = Object.keys(scoreObj)[0];
+        studentsTestScores[currStudent] ? studentsTestScores[currStudent].push(scoreObj[currStudent])
+            : studentsTestScores[currStudent] = [scoreObj[currStudent]];
     }
+
+    // for (let scoreObj of avg) {
+    //     for (let student in scoreObj) {
+    //         if (studentsTestScores[student]) {
+    //             studentsTestScores[student].push(scoreObj[student]);
+    //         } else {
+    //             studentsTestScores[student] = [scoreObj[student]];
+    //         }
+    //     }
+    // }
 
     console.log(studentsTestScores);
 }
