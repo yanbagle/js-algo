@@ -31,11 +31,12 @@ function courseSchedule (numCourses, prerequisites) {
         }
     }
 
-    let numNoPreReq = noPreReqQueue.length();
+    let numNoPreReq = noPreReqQueue.length;
 
     while (numNoPreReq.length > 0) {
         const curr = numNoPreReq.shift();
         for (let i = 0; i < prerequisites.length; i++) {
+            // if a course's prerequisite can be satisfied by a course in queue
             if (curr === prerequisites[i][1]) {
                 preReqCounter[prerequisites[i][0]]--;
                 if (preReqCounter[prerequisites[i][0]] === 0) {
@@ -46,5 +47,10 @@ function courseSchedule (numCourses, prerequisites) {
         }
     }
 
+    return numNoPreReq === numCourses;
+
 }
 
+const canFinish = courseSchedule(2, [[1,0]]);
+
+console.log(canFinish);
