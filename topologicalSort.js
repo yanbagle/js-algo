@@ -18,7 +18,7 @@ Graph.prototype.topologicalSort = function () {
 
     for (let node in this.graph) {
         if (!this.visited[node]) {
-            this.stack.push(this.topologicalSortUtil(node));
+            this.topologicalSortUtil(node);
         }
     }
 
@@ -32,12 +32,12 @@ Graph.prototype.topologicalSortUtil = function (node) {
 
     // iterate thru the node's adjacent nodes
     for (let adjNode of this.graph[node]) {
-        if (adjNode && !this.visited[adjNode]) {
+        if (!this.visited[adjNode]) {
             this.topologicalSortUtil(adjNode);
         }
     }
 
-    return node;
+    this.stack.push(node);
 }
 
 let g = new Graph(6);
