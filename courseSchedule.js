@@ -19,6 +19,7 @@ function courseSchedule (numCourses, prerequisites) {
     // table / counter for prereqs
     let preReqCounter = {};
 
+    // store any course that has a prereq
     for (let i = 0; i < prerequisites.length; i++) {
         preReqCounter[prerequisites[i][0]] ? preReqCounter[prerequisites[i][0]]++ : preReqCounter[prerequisites[i][0]] = 1;
     }

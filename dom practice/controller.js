@@ -1,4 +1,5 @@
-function loadDoc() {
+function loadDoc(num) {
+    console.log(num);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -6,10 +7,9 @@ function loadDoc() {
         }
     };
 
-    xhttp.open("GET", "https://giphy.com/gifs/justintimberlake-justin-timberlake-man-of-the-woods-3o7WIFL3Fj8qXgemsM", true);
+    xhttp.open("GET", "http://localhost:8080/api/projects/open", true);
     xhttp.setRequestHeader('Accept', 'application/json, text/javascript');
     xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhttp.send();
 }
 
-loadDoc();
