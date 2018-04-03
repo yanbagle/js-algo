@@ -98,3 +98,5 @@ var showDataVar = user.showData.bind (user);
 ​
 // Now the we get the value from the user object because the this keyword is bound to the user object​
 showDataVar (); // P. Mickelson 43​
+
+//////////////////////////////////////////////////////////////////////////////////////////
