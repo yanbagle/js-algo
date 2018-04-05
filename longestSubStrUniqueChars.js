@@ -11,7 +11,9 @@ function longestUniqueCharSubStr(str) {
     for (let i = 0; i < str.length; i++) {
         if (visited[str.charAt(i)] !== undefined) {
             maxLength = Math.max(maxLength, currentLength);
-            currentLength = i - visited[str.charAt(i)];
+            currentLength = 1;
+            visited = {};
+            visited[str.charAt(i)] = i;
         }
         else {
             currentLength++;
