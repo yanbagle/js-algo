@@ -42,8 +42,8 @@ Graph.prototype.topologicalSortUtil = function (node) {
     this.stack.push(node);
 };
 
-// const depLists = [['c','b'],['m','binary'],['b','l'],['l','binary'],['c','m'],['b','r']];
-const depLists = [['c','b'],['b','c']];
+const depLists = [['c','b'],['m','binary'],['b','l'],['l','binary'],['c','m'],['b','r']];
+// const depLists = [['c','b'],['b','c']];
 let graph = new Graph(depLists);
 graph.topologicalSort();
 
