@@ -27,7 +27,7 @@ function getItinerary(flights) {
 
     let itinerary = startingDes + ' -> ';
     let currFlight = startingDes;
-    for (let flight in flightTable) {
+    while (flightTable[currFlight]) {
         const next = flightTable[currFlight];
         itinerary += next + ' -> ';
         currFlight = next;
