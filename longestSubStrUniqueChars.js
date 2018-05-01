@@ -1,29 +1,33 @@
 function longestUniqueCharSubStr(str) {
 
     if (!str) {
-        return null;
+        return;
     }
 
-    let currentLength = 0;
+    let seen = {};
     let maxLength = 0;
-    let visited = {};
-
+    let currLength = 0;
     for (let i = 0; i < str.length; i++) {
-        if (visited[str.charAt(i)] !== undefined) {
-            maxLength = Math.max(maxLength, currentLength);
-            currentLength = 1;
-            visited = {};
-            visited[str.charAt(i)] = i;
+        if (!seen[str.charAt(i)]) {
+            seen[str.charAt(i)] = true;
+            currLength++;
+        } else { // char has been seen before
+            seen = {};
+            if (str.charAt(i - 1) === str.charAt(i)) { // if previous char is the same
+                seen[str.charAt(i)] = true;
+                currLength = 1;
+            } else {
+                currLength = 2;
+                seen[str.charAt(i)] = true;
+                seen[str.charAt(i-1)] = true;
+            }
         }
-        else {
-            currentLength++;
-        }
-        visited[str.charAt(i)] = i;
+        maxLength = Math.max(maxLength, currLength);
     }
-
-    maxLength = Math.max(maxLength, currentLength);
 
     return maxLength;
 }
 
-console.log(longestUniqueCharSubStr('abba'));
+console.log(longestUniqueCharSubStr('babcddbd'));
+console.log(longestUniqueCharSubStr('bbca'));
+console.log(longestUniqueCharSubStr('dvdf'));
