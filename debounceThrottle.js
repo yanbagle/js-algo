@@ -30,7 +30,7 @@ const throttle2 = function (func, limit) {
 	let timeout;
 	let count = 0; // count is for debugging only
 	let preFunc;
-	function execute() {
+	return function execute() {
 		preFunc = func;
 		count++;
 		if (!timeout) {
@@ -45,7 +45,6 @@ const throttle2 = function (func, limit) {
 			}, limit);
 		}
 	}
-	return execute;
 };
 
 // window.onload = function() {

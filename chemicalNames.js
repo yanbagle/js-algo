@@ -5,12 +5,31 @@ function matchSymbols (chemicals, symbols) {
 
     let match;
     let matchedIndex;
+    let output = [];
 
-    const output = chemicals.map((chemical) => {
-        match = '';
-        matchedIndex = -1;
+    // const output = chemicals.map((chemical) => {
+    //     match = '';
+    //     matchedIndex = -1;
+    //     for (let symbol of symbols) {
+    //         const foundIndex = chemical.indexOf(symbol);
+    //         if (foundIndex > -1) {
+    //             if (symbol.length > match.length) {
+    //                 match = symbol;
+    //                 matchedIndex = foundIndex;
+    //             }
+    //         }
+    //     }
+    //     if (match.length) {
+    //         return chemical.substring(0, matchedIndex) + '[' + chemical.substring(matchedIndex, matchedIndex + match.length)
+    //             + ']' + chemical.substring(matchedIndex + match.length);
+    //     }
+    // });
+
+    chemicals.forEach((chem) => {
+        let match = '';
+        let matchedIndex = -1;
         for (let symbol of symbols) {
-            const foundIndex = chemical.indexOf(symbol);
+            let foundIndex = chem.indexOf(symbol);
             if (foundIndex > -1) {
                 if (symbol.length > match.length) {
                     match = symbol;
@@ -18,9 +37,8 @@ function matchSymbols (chemicals, symbols) {
                 }
             }
         }
-        if (match.length) {
-            return chemical.substring(0, matchedIndex) + '[' + chemical.substring(matchedIndex, matchedIndex + match.length)
-                + ']' + chemical.substring(matchedIndex + match.length);
+        if (match) {
+            output.push(chem.substring(0, matchedIndex) + '[' + match + ']' + chem.substring(matchedIndex + match.length));
         }
     });
 
