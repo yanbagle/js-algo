@@ -3,7 +3,7 @@ const a = {
 		x: 100,
 		y: 200
 	},
-	someFunc: function (arg1, arg2) {
+	someFunc: function (arg1 = 0, arg2 = 0) {
 		console.log(this.data.x);
 		console.log(arg1);
 		console.log(arg2);
@@ -30,7 +30,7 @@ Function.prototype._bind2 = function (context, ...args1) {
 };
 
 const someFunc = a.someFunc._bind({data: {x: 2}});
-someFunc(); // logs 2
+someFunc(); // logs 2 0 0
 
 const someFunc2 = a.someFunc._bind2({data: {x: 3}}, 1);
 someFunc2(2); // logs 3 1 2
