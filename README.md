@@ -1,3 +1,3 @@
 # js-algo
 
-Using hashtables in Javascript is so nice and easy! 
+es6 is dreamy
