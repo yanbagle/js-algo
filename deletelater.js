@@ -1,3 +1,3 @@
-const someFunc = () => {
-  console.log("hello");
-}
+const isEven = (num) => {
+  return num % 2 === 0;
+};
