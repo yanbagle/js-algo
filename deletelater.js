@@ -28,3 +28,13 @@ const getOddElements = (arr) => {
 };
 
 console.log(getOddElements([1,2,3,4,5,6,]));
+
+const getTotal = (arr) => {
+  const total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      total += arr[i];
+    }
+  }
+  return total;
+}
