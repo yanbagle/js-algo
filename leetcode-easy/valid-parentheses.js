@@ -9,7 +9,7 @@ Open brackets must be closed in the correct order.
 
 const validParentheses = (str) => {
   if (!str) {
-    return;
+    return false;
   }
   
   const validParentheses = {
