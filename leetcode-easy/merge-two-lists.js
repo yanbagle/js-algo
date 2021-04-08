@@ -45,7 +45,6 @@ const mergeTwoLists = (l1, l2) => {
   
   let p1 = l1;
   let p2 = l2;
-  let smallest = Number.MIN_VALUE;
   
   while (p1 || p2) {    
     if (p1 && p2) {
