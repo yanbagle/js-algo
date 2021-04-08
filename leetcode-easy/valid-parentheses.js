@@ -25,7 +25,7 @@ const validParentheses = (str) => {
     if (validParentheses[char]) {
       stack.push(char);
     } else {
-      // we have a closed parentheses here, so we check if top of the stack has the open parentheses 
+      // we might have a closed parentheses here, so we check if the top of the stack has the matching open parentheses 
       const maybeOpenParentheses = stack[stack.length - 1];
       if (validParentheses[maybeOpenParentheses] !== char) {
         return false;
