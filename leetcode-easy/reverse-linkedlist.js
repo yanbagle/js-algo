@@ -15,7 +15,8 @@ const reverseLinkedList = (ll) => {
   }
   
   const head = new Node();
-  const reversedLL = head;
+  head.next = new Node();
+  const reversedLL = head.next;
   
   reverse(ll, reversedLL);
   return head.next;
@@ -23,8 +24,9 @@ const reverseLinkedList = (ll) => {
 
 const reverse = (ll, reversedLL) => {
   if (ll) {
-    reverse(ll.next, reversedLL);
+    reversedLL = reverse(ll.next, reversedLL);
     reversedLL.next = new Node(ll.data);
     reversedLL = reversedLL.next;
   } 
+  return reversedLL;
 }
