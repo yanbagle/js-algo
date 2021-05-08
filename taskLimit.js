@@ -1,4 +1,4 @@
-function myTask (taskCounter, counter, cb) {
+function myTask (taskCounter, cb) {
 	return function runTask () {
 		console.log('running');
 		setTimeout(() => {
@@ -19,7 +19,7 @@ function taskRunner () {
 		} else {
 			counter++;
 			taskCounter++;
-			let runner = task(taskCounter, counter, () => {
+			let runner = task(taskCounter, () => { // taskCounter purely for logging, only need cb function
 				// done
 				counter--;
 				if (taskQueue.length) {
