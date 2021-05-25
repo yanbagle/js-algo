@@ -37,7 +37,7 @@ const getCommonChars = (strArr) => {
       charCount = Math.min(charCount, charTable[tableIndex][char]);
       tableIndex++;
     }
-    if (charIsFound && tableIndex === charTable.length) {
+    if (charIsFound && tableIndex === charTable.length) { // character is present in all strings
       while (charCount > 0) {
         commonChars.push(char);
         charCount--;  
