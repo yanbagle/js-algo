@@ -42,6 +42,7 @@ const canPartition = (deck) => {
   
   const isEven = freqTable[deck[0]] % 2 === 0;
   
+  // if even OR odd freq then true, but if mix of odd AND even then false
   for (const freq in freqTable) {
     if ((isEven && freqTable[freq] % 2 !== 0) || (!isEven && freqTable[freq] % 2 === 0)) { // if mix of even and odd freq
       return false;
