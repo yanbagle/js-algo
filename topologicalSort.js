@@ -1,21 +1,17 @@
 function Graph (n) {
-
     this.graph = {};
-
-    for (let i = 0; i < n; i++) {
-        this.graph[i] = [];
-    }
+    this.stack = [];
+    this.visited = {};
 }
 
 Graph.prototype.addEdge = function (node, adj) {
-    this.graph[node].push(adj);
+  if (!this.graph[node]) {
+    this.graph[node] = [];
+  } 
+  this.graph[node].push(adj);
 }
 
 Graph.prototype.topologicalSort = function () {
-
-    this.stack = [];
-    this.visited = {};
-
     for (let node in this.graph) {
         if (!this.visited[node]) {
             this.topologicalSortUtil(node);
@@ -30,17 +26,19 @@ Graph.prototype.topologicalSortUtil = function (node) {
 
     this.visited[node] = true;
 
-    // iterate thru the node's adjacent nodes
-    for (let adjNode of this.graph[node]) {
-        if (!this.visited[adjNode]) {
-            this.topologicalSortUtil(adjNode);
-        }
+    if (this.graph[node]) {
+      // iterate thru the node's adjacent nodes
+      for (let adjNode of this.graph[node]) {
+          if (!this.visited[adjNode]) { 
+              this.topologicalSortUtil(adjNode);
+          }
+      }
     }
 
     this.stack.push(node);
 }
 
-let g = new Graph(6);
+let g = new Graph();
 g.addEdge(5, 2);
 g.addEdge(5, 0);
 g.addEdge(4, 0);

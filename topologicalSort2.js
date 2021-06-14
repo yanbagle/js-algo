@@ -1,4 +1,4 @@
-function Graph (depLists) {
+yfunction Graph (depLists) {
     this.graph = {};
 
     for (let dep of depLists) {
