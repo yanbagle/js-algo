@@ -46,7 +46,7 @@ class Board extends React.Component {
     console.log('checking winner');
     const squares = this.state.squares.slice();
     const winner = this.calculateWinner(squares);
-    if (!this.state.winner && winner) {
+    if (winner) {
       this.setState({
         winner,
       });
