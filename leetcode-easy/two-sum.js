@@ -206,7 +206,7 @@ const twoSum3 = (arr, target) => {
   let solution = [];
   for (let j = 0; j < arr.length; j++) {
     compliment = target - arr[i];
-    if (arr[compliment] && arr[compliment] !== j) { // check if compliment exists and it's not a dupe
+    if (arrHash[compliment] && arrHash[compliment] !== j) { // check if compliment exists and it's not a dupe
       solution.push(compliment);
       solution.push(arr[i]);
       return solution;
