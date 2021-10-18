@@ -1,0 +1,191 @@
+[
+  {
+    'productId':'1540_9636_915',
+    'productCategory':'Ripped Jeans',
+    'productName':'AE NE(X)T LEVEL JEGGING OVERALL',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/1540_9636_915_of?$cat-main_large$',
+    'productStock':false,
+    'productPrice':'59.99',
+    'sizes': [{sku: '915_001', label: 's'}, {sku: '915_002', label: 'm'}, {sku: '915_003', label: 'l'}]
+  },
+  {
+    'productId':'0436_1156_82',
+    'productCategory':'Ripped Jeans',
+    'productName':'TOMGIRL OVERALL',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0436_1156_826_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'49.99',
+    'sizes': [{sku: '82_001', label: 's'}, {sku: '82_002', label: 'm'}, {sku: '82_003', label: 'l'}]
+  },
+  {
+    'productId':'1540_9636_920',
+    'productCategory':'Ripped Jeans',
+    'productName':'Mom Jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0433_1192_486_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'49.95',
+    'sizes': [{sku: '920_001', label: 's'}, {sku: '920_002', label: 'm'}, {sku: '920_003', label: 'l'}]
+  },
+  {
+    'productId':'0431_1274_973',
+    'productCategory':'Ripped Jeans',
+    'productName':'AE Denim',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0431_1274_973_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '1274_001', label: 's'}, {sku: '1274_002', label: 'm'}, {sku: '1274_003', label: 'l'}]
+  },
+  {
+    'productId':'2433_1325_980',
+    'productCategory':'Ripped Jeans',
+    'productName':'AE NE(X)T LEVEL HIGH-WAISTED JEGGING CROP',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/2433_1325_980_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '2433_001', label: 's'}, {sku: '2433_002', label: 'm'}, {sku: '2433_003', label: 'l'}]
+  },
+  {
+    'productId':'0327_3240_401',
+    'productCategory':'Ripped Jeans',
+    'productName':'Skinny Jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0327_3240_401_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '0327_001', label: 's'}, {sku: '0327_002', label: 'm'}, {sku: '0327_003', label: 'l'}]
+  },
+  {
+    'productId':'2433_1333_903',
+    'productCategory':'Ripped Jeans',
+    'productName':'HIGH Waisted Jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/2433_1333_903_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'69.99',
+    'sizes': [{sku: '903_001', label: 's'}, {sku: '903_002', label: 'm'}, {sku: '903_003', label: 'l'}]
+  },
+  {
+    'productId':'2433_1334_443',
+    'productCategory':'Ripped Jeans',
+    'productName':'Seamless high-waisted jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/2433_1334_443_of?$cat-main_large$',
+    'productStock':false,
+    'productPrice':'39.99',
+    'sizes': [{sku: '443_001', label: 's'}, {sku: '443_002', label: 'm'}, {sku: '443_003', label: 'l'}]
+  },
+  {
+    'productId':'1432_1146_481',
+    'productCategory':'Light Wash Jeans',
+    'productName':'Favorite Boyfriend Jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/1432_1146_481_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'29.99',
+    'sizes': [{sku: '481_001', label: 's'}, {sku: '481_002', label: 'm'}, {sku: '481_003', label: 'l'}]
+  },
+  {
+    'productId':'1437_1087_910',
+    'productCategory':'Light Wash Jeans',
+    'productName':'Kick Bootcut jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/1437_1087_910_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '910_001', label: 's'}, {sku: '910_002', label: 'm'}, {sku: '910_003', label: 'l'}]
+  },
+  {
+    'productId':'1540_9638_906',
+    'productCategory':'Dark Wash Jeans',
+    'productName':'High-waisted jegging',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/1540_9638_906_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'49.99',
+    'sizes': [{sku: '906_001', label: 's'}, {sku: '906_002', label: 'm'}, {sku: '906_003', label: 'l'}]
+  },
+  {
+    'productId':'0326_3214_429',
+    'productCategory':'Dark Wash Jeans',
+    'productName':'Super Soft high-waisted jegging',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0326_3214_429_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '0326_3214_429_001', label: 's'}, {sku: '0326_3214_429_002', label: 'm'}, {sku: '0326_3214_429_003', label: 'l'}]
+  },
+  {
+    'productId':'3437_1341_413',
+    'productCategory':'Dark Wash Jeans',
+    'productName':'High-waisted tomgirl',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/3437_1341_413_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '3437_1341_413_001', label: 's'}, {sku: '3437_1341_413_002', label: 'm'}, {sku: '3437_1341_413_003', label: 'l'}]
+  },
+  {
+    'productId':'0326_3116_446',
+    'productCategory':'Acid Wash Jeans',
+    'productName':'Wash jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0326_3116_446_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'33.99',
+    'sizes': [{sku: '0326_3116_446_001', label: 's'}, {sku: '0326_3116_446_002', label: 'm'}, {sku: '0326_3116_446_003', label: 'l'}]
+  },
+  {
+    'productId':'0432_1151_322',
+    'productCategory':'Black Jeans',
+    'productName':'Skinny Jean',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0432_1151_322_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'79.99',
+    'sizes': [{sku: '0432_1151_322_001', label: 's'}, {sku: '0432_1151_322_002', label: 'm'}, {sku: '0432_1151_322_003', label: 'l'}]
+  },
+  {
+    'productId':'0431_1282_064',
+    'productCategory':'Black Jeans',
+    'productName':'Denim x jegging',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0431_1282_064_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '0431_1282_064_001', label: 's'}, {sku: '0431_1282_064_002', label: 'm'}, {sku: '0431_1282_064_003', label: 'l'}]
+  },
+  {
+    'productId':'0327_3078_001',
+    'productCategory':'Black Jeans',
+    'productName':'Super high waisted-jegging',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0327_3078_001_of?$cat-main_large$',
+    'productStock':false,
+    'productPrice':'39.99',
+    'sizes': [{sku: '0327_3078_001_001', label: 's'}, {sku: '0327_3078_001_002', label: 'm'}, {sku: '0327_3078_001_003', label: 'l'}]
+  },
+  {
+    'productId':'0327_2668_073',
+    'productCategory':'Black Jeans',
+    'productName':'Super soft jegging',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0327_2668_073_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'89.99',
+    'sizes': [{sku: '0327_2668_073_001', label: 's'}, {sku: '0327_2668_073_002', label: 'm'}, {sku: '0327_2668_073_003', label: 'l'}]
+  },
+  {
+    'productId':'0325_3245_313',
+    'productCategory':'Colored Jeans',
+    'productName':'Denim x Jegging Crop',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/0325_3245_313_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'39.99',
+    'sizes': [{sku: '0325_3245_313_001', label: 's'}, {sku: '0325_3245_313_002', label: 'm'}, {sku: '0325_3245_313_003', label: 'l'}]
+  },
+  {
+    'productId':'2322_2974_016',
+    'productCategory':'Colored Jeans',
+    'productName':'Denimx X Tomgirl',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/2322_2974_016_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'33.99',
+    'sizes': [{sku: '2322_2974_016_001', label: 's'}, {sku: '2322_2974_016_002', label: 'm'}, {sku: '2322_2974_016_003', label: 'l'}]
+  },
+  {
+    'productId':'2322_3147_005',
+    'productCategory':'Colored Jeans',
+    'productName':'Denim X Tomgirl Pant',
+    'productImage':'https://s7d2.scene7.com/is/image/aeo/2322_3147_005_of?$cat-main_large$',
+    'productStock':true,
+    'productPrice':'29.99',
+    'sizes': [{sku: '2322_3147_005_001', label: 's'}, {sku: '2322_3147_005_002', label: 'm'}, {sku: '2322_3147_005_003', label: 'l'}]
+  },
+]

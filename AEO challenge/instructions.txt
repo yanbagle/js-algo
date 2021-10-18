@@ -1,0 +1,14 @@
+Use the Products JSON included with this exercise. You will need to copy the JSON content and save as a variable in your code.
+
+The application should render a page for all the products in the JSON. Every product has a category, 
+your application should display all the categories on the left of the products and on click of a category, your 
+app should filter products to only display the products from that category. The category title should be displayed on the 
+top of the prouduct list.
+
+Every product should display an image, name and the price.
+
+The page should be responsive, on mobile it should have the category filter on the top as drop down and display two products in a row. 
+
+Mobile design here, https://bit.ly/2V1hVwB
+On Desktop, it should display 3 products in a row and categories on the left. Desktop design here, https://bit.ly/3rr7Cy2
+
