@@ -21,14 +21,11 @@ const isAnagram = (s, t) => {
     freqTable[c] = freqTable[c] ? freqTable[c]+1 : 1;
   }
   
-  
   for (const c of t) {
-    if (freqTable[c] || freqTable[c] === 0) {
-      freqTable[c]--;
-    }  
-    if (freqTable[c] === undefined || freqTable[c] < 0) {
+    if (freqTable[c] === undefined || freqTable[c] === 0) {
       return false;
     }
+    freqTable[c]--;
   }
   
   return true;
