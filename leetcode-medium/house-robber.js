@@ -22,7 +22,7 @@ const rob = (nums) => {
   }
   
   const dp = [];
-  dp[0] = 0;
+  dp[0] = 0; // base case, rob 0 houses, get 0 cash
   dp[1] = nums[0];
   
   for (let i = 1; i < nums.length; i++) {
@@ -31,3 +31,34 @@ const rob = (nums) => {
   
   return dp[nums.length];
 }
+
+const rob2 = (nums) => {
+  if (!nums || !nums.length) {
+    return 0;
+  }
+  
+  let p1 = 0; // current running max
+  let p2 = 0; // previous running max
+  let temp; // for saving p1 value
+  
+  nums.forEach(n => {
+    temp = p1;
+    p1 = Math.max(p1, p2 + n);
+    p2 = temp;
+  });
+  
+  return p1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
