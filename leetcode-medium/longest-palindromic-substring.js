@@ -22,7 +22,6 @@ const longestPalindrome = (s) => {
     return "";
   }
   
-  let maxLength = 0;
   let maxResult = "";
   let r;
   let l;
@@ -31,21 +30,20 @@ const longestPalindrome = (s) => {
     // odd case 
     r = i;
     l = i;  
-    maxResult = palindromeCheck(r, l, s, maxResult, maxResult.length);
+    maxResult = palindromeCheck(r, l, s, maxResult);
     
     // even case
     l = i;
     r = i + 1;
-    maxResult = palindromeCheck(r, l, s, maxResult, maxResult.length);
+    maxResult = palindromeCheck(r, l, s, maxResult);
   }
   
   return maxResult;
 }
 
-const palindromeCheck = (r, l, string, maxResult, maxLength) => {
+const palindromeCheck = (r, l, string, maxResult) => {
   while (r < string.length && l >= 0 && string.charAt(l) === string.charAt(r)) {
-    if (r - l + 1 > maxLength) {
-      maxLength = r - l + 1;
+    if (r - l + 1 > maxResult.length) {
       maxResult = string.substring(l, r + 1);
     }
     r++;
