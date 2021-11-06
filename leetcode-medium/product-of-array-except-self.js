@@ -22,13 +22,13 @@ const productExceptSelf = (nums) => {
   const results = [];
   let prefix = 1;
   for (let i = 0; i < nums.length; i++) {
-    results[i] = prefix;
+    results[i] = prefix; // adding prefix into results, which will be times with postfix in the next loop
     prefix *= nums[i];
   }
   
   let postfix = 1;
   for (let i = nums.length - 1; i >= 0; i--) {
-    results[i] *= postfix;
+    results[i] *= postfix; // prefix * postfix
     postfix *= nums[i];
   }
   
