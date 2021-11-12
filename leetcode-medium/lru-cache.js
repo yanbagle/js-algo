@@ -58,9 +58,9 @@ LRUCache.prototype.get = function (key) {
 };
 
 LRUCache.prototype.put = function (key, value) {
-  if (this.cache[key]) { // if it already exists, update it to be the most recently used
+  if (this.cache[key]) { // if it already exists, remove it from the linked list, will reinsert later
     this.remove(this.cache[key]);
-  } 
+  }
   this.cache[key] = new Node(key, value);
   this.insert(this.cache[key]);
   
