@@ -36,7 +36,7 @@ const uniquePaths2 = (m, n) => {
   
   for (let i = 0; i < m - 1; i++) { // bottom row is already calculated, so skipping
     newRow = Array(n).fill(1); // fill it out with 1's initially
-    for (let j = n - 2; j >= 0; j--) {
+    for (let j = n - 2; j >= 0; j--) { // skipping last column element because it will always be a 1
       newRow[j] = newRow[j+1] + row[j]; // adding the right ways and the bottom ways to get newRow[j]
     }
     row = newRow;
