@@ -15,7 +15,7 @@ Output: []
 
 */
 
-const invertTree = (root) => {=wq 
+const invertTree = (root) => {
   if (!root) {
     return null;
   }
