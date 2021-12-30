@@ -9,7 +9,7 @@ const Node = function (data) {
   this.next;
 }
 
-const reverseLinkedList = (ll) => {
+const reverseList = (ll) => {
   if (!ll) {
     return; 
   }
