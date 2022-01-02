@@ -10,63 +10,48 @@ Output: []
 
 Input: l1 = [], l2 = [0]
 Output: [0]
+
+* function ListNode(val, next) {
+*     this.val = (val===undefined ? 0 : val)
+*     this.next = (next===undefined ? null : next)
+* }
+
 */
 
-const Node = function (data) {
-  this.data = data;
-  this.next;
-}
-
-const l1 = new Node(1);
-const l2 = new Node(1);
-const l3 = new Node(2);
-const l4 = new Node(5);
-const l5 = new Node(10);
-l1.next = l2;
-l2.next = l3;
-l3.next = l4;
-l4.next = l5;
-
-const l6 = new Node(1);
-const l7 = new Node(2);
-const l8 = new Node(3);
-const l9 = new Node(8);
-l6.next = l7;
-l7.next = l8;
-l8.next = l9;
-
 const mergeTwoLists = (l1, l2) => {
-  if (!l1 || !l2) {
-    return null;
-  }
+  const head = new ListNode();
+  let tail = head;
   
-  const mergedList = new Node();
-  let mergedListPointer = mergedList;
-  
-  let p1 = l1;
-  let p2 = l2;
-  
-  while (p1 || p2) {    
-    if (p1 && p2) {
-      if (p1.data <= p2.data) {
-        mergedListPointer.next = new Node(p1.data);
-        p1 = p1.next;
-      } else {
-        mergedListPointer.next = new Node(p2.data);
-        p2 = p2.next;
-      }
-    } else if (p1) {
-      mergedListPointer.next = new Node(p1.data);
-      p1 = p1.next;
-    } else if (p2) { 
-      mergedListPointer.next = new Node(p2.data);
-      p2 = p2.next;
+  while (l1 && l2) {
+    if (l1.val < l2.val) {
+      tail.next = l1;
+      l1 = l1.next;
+    } else {
+      tail.next = l2;
+      l2 = l2.next;
     }
-    mergedListPointer = mergedListPointer.next;
+    tail = tail.next;
   }
   
-  return mergedList.next;
+  // leftover nodes
+  if (l1) {
+    tail.next = l1;
+  }
+  if (l2) {
+    tail.next = l2;
+  }
+  
+  return head.next;
 }
+
+
+
+
+
+
+
+
+
 
 
 
