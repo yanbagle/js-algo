@@ -19,7 +19,7 @@ Explanation: There are three ways to climb to the top.
 
 */
 
-const climbStairs = (n) => {
+const climbStairs2 = (n) => {
   if (n === null || typeof n !== 'number') {
     return 0;
   }
@@ -36,3 +36,28 @@ const climbStairs = (n) => {
   
   return ways[ways.length - 1];
 }
+
+const climbStairs = (n) => {
+  let one = 1;
+  let two = 1;
+  let temp;
+  
+  for (let i = 1; i < n; i++) {
+    temp = one;
+    one += two;
+    two = temp;
+  }
+  
+  return one;
+}
+
+
+
+
+
+
+
+
+
+
+
