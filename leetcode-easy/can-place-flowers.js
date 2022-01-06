@@ -6,7 +6,7 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 
 */
 
-const canPlantFlowers = (flowerbed, n) => {
+const canPlaceFlowers = (flowerbed, n) => {
   if (!flowerbed || flowerbed.length === 0) {
     return false;
   }
