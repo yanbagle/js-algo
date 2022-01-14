@@ -16,13 +16,14 @@ Output: false
 const wordBreak = (s, wordDict) => {
   const sLen = s.length;
   const dp = new Array(sLen + 1).fill(false);
-  dp[sLen] = true;
+  dp[sLen] = true; // base case, has to be true
   
   for (let i = sLen - 1; i >= 0; i--) {
     for (const word of wordDict) {
-      if (i + word.length <= sLen && s.substring(i, i + word.length) === word) {
+      if (i + word.length <= sLen && s.substring(i, i + word.length) === word) { // word matches substring in s
         // instead of doing dp[i] = true, this ensures every word/char in s is accounted for 
-        // e.g. s = 'catdog' wd = ['cat,'mouse'], dp[0] is true but no match for dog, so dp[0] will be false too 
+        // e.g. s = 'catdog' wd = ['cat,'mouse'], dp[0] is techincally true BUT no match for dog, so dp[0] will be false  
+        // dp[i] will only be true if previous matches were too 
         dp[i] = dp[i + word.length];
       }
       if (dp[i]) {
