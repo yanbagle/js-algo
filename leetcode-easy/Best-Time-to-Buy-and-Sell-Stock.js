@@ -21,10 +21,6 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 */
 
 const maxProfit = (prices) => {
-  if (!prices || prices.length < 2) {
-    return 0;
-  }
-  
   let minPrice = prices[0];
   let maxProfit = 0;
   
