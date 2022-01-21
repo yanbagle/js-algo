@@ -7,7 +7,7 @@ https://www.lintcode.com/problem/919/
 const minMeetingRooms = (intervals) => {
   const start = [];
   const end = [];
-    for (let i = 0; i < intervals.length; i++) {
+  for (let i = 0; i < intervals.length; i++) {
     start[i] = intervals[i][0];
     end[i] = intervals[i][1];
   }
