@@ -13,19 +13,15 @@ Output: true
 
 */
 
-const containsDuplicate = (arr) => {
-  if (!arr || arr.length === 0) {
-    return false;
-  }
+const containsDuplicate = (arr) => {  
   
   const countTable = {};
   
   for (const num of arr) {
     if (countTable[num]) {
       return true;
-    } else {
-      countTable[num] = 1;
-    } 
+    }
+    countTable[num] = 1;
   }
   
   return false;
