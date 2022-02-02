@@ -6,6 +6,19 @@ Merge all the linked-lists into one sorted linked-list and return it.
 
 */
 
+
+/*
+
+while lists' length is greater than 1
+  for loop with i skipping 2 times per iteration because we want to grab 2 lists at a time
+    l1 = lists[i]
+    l2 = lists[i+1] // if not out of bounds
+    merged.push(mergeList(l1,l2));
+  lists = merged
+  
+  return lists[0]
+*/
+
 const mergeKLists = (lists) => {
   if (!lists || !lists.length) {
     return null;

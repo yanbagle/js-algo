@@ -9,6 +9,17 @@ Output: 3
 
 */
 
+/*
+  q = [root]
+  while q is NOT empty
+    for nodes in q //important that original length of q is preserved and used here
+      n = q.shift() // removes first element
+      add left and right child of n into q
+    level++
+    
+  return level
+*/
+
 const levelOrder = (root) => {
   if (!root) {
     return 0;

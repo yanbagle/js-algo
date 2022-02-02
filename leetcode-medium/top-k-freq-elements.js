@@ -10,6 +10,21 @@ Output: [1]
 
 */
 
+/*
+
+create a freqTable from nums' count
+
+transform the freqTable into an array with the index corresponding to its frequency
+e.g. [1,1,2,2,2,3] => [ [] , [3] , [1], [2] ] 
+3 appears 1 time so it's under index 1, 1 appears 2 times so it's in index 2, etc
+
+Loop through that array backwards because we want the top k freq 
+  fill in res with the numbers until res.length is equal to k 
+
+return res
+
+*/
+
 const topKFrequent = (nums, k) => {
   const freqCount = {};
   const freqArray = [];
