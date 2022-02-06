@@ -20,7 +20,7 @@ Output: 3
   return level
 */
 
-const levelOrder = (root) => {
+const maxDepth = (root) => {
   if (!root) {
     return 0;
   }
