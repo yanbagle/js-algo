@@ -16,6 +16,8 @@ const characterReplacement = (s, k) => {
     countTable[c] = countTable[c] ? countTable[c] + 1 : 1;
     
     const windowLength = r - l + 1;
+    
+    // we've reached the allowable replacements we can make within this window
     if (windowLength - Math.max(...Object.values(countTable)) > k) {
       countTable[s.charAt(l)] = countTable[s.charAt(l)] - 1;
       l++;
