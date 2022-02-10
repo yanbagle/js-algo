@@ -23,7 +23,7 @@ const lengthOfLongestSubstring = function(str) {
   let i = 0;
   let j = 0;
   let maxLength = 0;
-  charTable = {};
+  const charTable = {};
   
   while (j < str.length) {
     const c = str.charAt(j);
