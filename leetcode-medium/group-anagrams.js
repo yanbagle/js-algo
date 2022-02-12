@@ -15,7 +15,6 @@ Output: [["a"]]
 
 */
 
-
 const groupAnagrams = (strs) => {
   
   const anagramSet = {};
