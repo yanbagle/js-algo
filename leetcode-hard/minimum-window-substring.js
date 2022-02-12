@@ -13,13 +13,13 @@ const minWindow = (s, t) => {
   const slidingWindow = {};
   
   for (const c of t) {
-    tCount[c] = tCount[c] ? tCount[c]++ : 1;
+    tCount[c] = tCount[c] ? tCount[c] + 1 : 1;
   }
   
   let have = 0;
   const need = Object.keys(tCount).length;
   
-  let res = [-1,-1];
+  let res = [-1,-1]; // keeps track of the l and r pointers 
   let resLen = Number.MAX_SAFE_INTEGER;
 
   let l = 0;
@@ -27,7 +27,7 @@ const minWindow = (s, t) => {
   
   while (r < s.length) {
     const c = s[r];
-    slidingWindow[c] = slidingWindow[c] ? slidingWindow[c]++ : 1;
+    slidingWindow[c] = slidingWindow[c] ? slidingWindow[c] + 1 : 1;
     
     if (tCount[c] && tCount[c] === slidingWindow[c]) { // if character exists in the t string 
       have++; // we're one count closer of having need and have to be the same  
