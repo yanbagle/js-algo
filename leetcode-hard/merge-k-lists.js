@@ -24,7 +24,6 @@ const mergeKLists = (lists) => {
     return null;
   }
   
-  const res = [];
   while (lists.length > 1) {
     const mergedLists = [];
     for (let i = 0; i < lists.length; i += 2) {
