@@ -19,6 +19,16 @@ Explanation: There are three ways to climb to the top.
 
 */
 
+const climbStairs = (n) => {
+  const arr = [0,1];
+  
+  for (let i = 2; i <= n + 1; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
+  }
+  
+  return arr[n + 1];
+} 
+
 const climbStairs2 = (n) => {
   if (n === null || typeof n !== 'number') {
     return 0;
