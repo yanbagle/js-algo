@@ -6,7 +6,7 @@ An island is surrounded by water and is formed by connecting adjacent lands hori
 
 */
 
-const numberOfIslands = (island) => {
+const numIslands = (island) => {
   if (!island || island.length === 0) {
     return 0;
   }
@@ -14,7 +14,7 @@ const numberOfIslands = (island) => {
   let count = 0;
   for (let i = 0; i < island.length; i++) {
     for (let j = 0; j < island[0].length; j++) {
-      if (island[i][j] === 1) {
+      if (island[i][j] === '1') {
         count++;
         dfs(island, i, j);
       }
@@ -28,7 +28,7 @@ const dfs = (island, i, j) => {
   const m = island.length;
   const n = island[0].length;
   
-  if (i < 0 || i >= m || j < 0 || j >= n || island[i][j] !== 1) {
+  if (i < 0 || i >= m || j < 0 || j >= n || island[i][j] !== '1') {
     return;
   }
   island[i][j] = 'x';
