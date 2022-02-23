@@ -21,12 +21,13 @@ const dfs = (i, j, ways, m, n) => {
   if (i >= m || j >= n) {
     return;
   }
-  else if (i === m - 1 && j === n - 1) {
+  
+  if (i === m - 1 && j === n - 1) { // reached the destination 
     ways.count++;
-  } else {
-    dfs(i+1, j, ways, m, n);
-    dfs(i, j+1, ways, m, n);
-  }
+    return;
+  } 
+  dfs(i+1, j, ways, m, n);
+  dfs(i, j+1, ways, m, n);
 }
 
 // dp solution 
