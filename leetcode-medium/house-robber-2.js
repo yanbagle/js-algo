@@ -19,17 +19,13 @@ Output: 3
 */
 
 const rob = (nums) => {
-  if (!nums || !nums.length) {
-    return 0;
-  }
-  
-  const [, ...arr1] = nums; 
-  const arr2 = nums.slice(0,-1);
+  const [, ...arr1] = nums; // array without the 1st element
+  const arr2 = nums.slice(0,-1); // array without the last element
   
   const rob1 = helper(arr1);
   const rob2 = helper(arr2);
   
-  return Math.max(rob1, rob2, nums[0]);
+  return Math.max(rob1, rob2, nums[0]); // nums[0] if only 1 house
 }
 
 const helper = (nums) => {

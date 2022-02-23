@@ -50,6 +50,23 @@ const rob2 = (nums) => {
   return p1;
 }
 
+const rob = (nums) => {
+  let rob1 = 0;
+  let rob2 = 0;
+  let temp;
+  
+  // [rob1, rob2, n, n + 1, n + ...]
+  for (const n of nums) {
+    temp = Math.max(n + rob1, rob2); // makes sense since n is adjacent to rob2, so we can't add them together
+    rob1 = rob2;
+    rob2 = temp;
+  }
+  return rob2;
+}
+
+
+
+
 
 
 
