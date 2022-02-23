@@ -16,17 +16,14 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 */
 
 const canJump = (nums) => {
-  if (!nums) {
-    return false;
-  }
+  let goal = nums.length - 1;
   
-  let max = 0;
-  for (let i = 0; i < nums.length; i++) {
-    if (max < i) {
-      return false;
+  // initially, goal is at the last index, and i is at the 2nd to last index 
+  for (let i = nums.length - 2; i >= 0; i--) {
+    if (i + nums[i] >= goal) { // if from our current step, we can reach our goal
+      goal = i;
     }
-    max = Math.max(nums[i] + i, max);
   }
   
-  return true;
+  return goal === 0;
 }
