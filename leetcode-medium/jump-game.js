@@ -19,11 +19,14 @@ const canJump = (nums) => {
   let goal = nums.length - 1;
   
   // initially, goal is at the last index, and i is at the 2nd to last index 
+  // e.g.
+  //        i  goal
+  // [1, 2, 3, 4 ]
   for (let i = nums.length - 2; i >= 0; i--) {
-    if (i + nums[i] >= goal) { // if from our current step, we can reach our goal
+    if (i + nums[i] >= goal) { // if from our current step, we can reach the goal
       goal = i;
     }
   }
   
-  return goal === 0;
+  return goal === 0; // if we made it all the way back
 }
