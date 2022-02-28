@@ -19,7 +19,7 @@ const maxArea = (height) => {
     // area of rectangle is width * height
     const area = Math.min(height[l], height[r]) * (r - l);
     maxArea = Math.max(maxArea, area);
-    if (height[l] < height[r]) {
+    if (height[l] < height[r]) { // if L is smaller / the limiting factor then shift it 
       l++;
     } else {
       r--;
