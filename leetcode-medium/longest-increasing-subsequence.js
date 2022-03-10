@@ -19,7 +19,8 @@ const lengthOfLIS = (nums) => {
   for (let i = nums.length - 1; i >= 0; i--) { // going backwards because we want to build off of dp[len - 1]
     for (let j = i + 1; j < nums.length; j++) { // loop through past nums/dp's we have calculated  
       if (nums[i] < nums[j]) { // if increasing sequence
-        dp[i] = Math.max(dp[i], 1 + dp[j]); // can either be 1 (default LIS value) or past dp[j] we've calculated + 1 
+        // can either be 1 (default LIS value) or past dp[i] / dp[j] we've calculated + 1 (because we've found another increasing number) 
+        dp[i] = Math.max(dp[i], 1 + dp[j]); 
       }
     }
   }
