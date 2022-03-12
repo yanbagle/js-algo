@@ -22,7 +22,7 @@ const lengthOfLIS = (nums) => {
         // can either be 1 (default LIS value) or past dp[i] / dp[j] we've calculated + 1 (because we've found another increasing number) 
         dp[i] = Math.max(dp[i], 1 + dp[j]); 
       }
-    }
+    } 
   }
   
   return Math.max(...dp);
