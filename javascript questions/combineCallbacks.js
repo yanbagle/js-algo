@@ -14,7 +14,8 @@ function combineFetchers (fetchers) {
 	}
 }
 
-const combined = combineFetchers([]);
+const combined = combineFetchers([]); // array of functions 
 combined('pattern', function (results) {
+	// callback function 
 	// do something with results
 });
