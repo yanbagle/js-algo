@@ -2,7 +2,12 @@
 
 https://leetcode.com/problems/coin-change-2/
 
+similar to combination sum IV
+
+difference here is no permuations of combinations of ways are allowed 
+
 */
+
 
 const change = (amount, coins) => {
   const dp = [1];
