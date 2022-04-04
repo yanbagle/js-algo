@@ -13,7 +13,7 @@ const balanceParen = (str) => {
     if (c === '(') {
       stack.push(['(', i]);
     } else if (c === ')'){
-      if (!stack.length) {
+      if (!stack.length) { // if stack is already empty, use removeIndices to store index to be removed
         removeIndices[i] = true;
       } else {
         stack.pop();
@@ -21,14 +21,14 @@ const balanceParen = (str) => {
     }
   }
   
-  while (stack.length) {
+  while (stack.length) { // consolidate the 2 data structures 
     const index = stack.pop()[1];
     removeIndices[index] = true;
   }
   
   let validStr = '';
   for (let i = 0; i < str.length; i++) {
-    if (!removeIndices[i]) {
+    if (!removeIndices[i]) { // if character is not in the remove set
       validStr += str.charAt(i);
     }
   }
