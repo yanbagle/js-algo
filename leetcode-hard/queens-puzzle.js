@@ -8,6 +8,7 @@ const solveNQueens = (n) => {
   
   const res = [];
   const board = [];
+  // just setting up the board
   for (let i = 0; i < n; i++) {
     board[i] = [];
     for (let j = 0; j < n; j++) {
@@ -20,8 +21,10 @@ const solveNQueens = (n) => {
   const col = {};
   
   const backtrack = (r) => {
-    if (r === n) {
-      // format into output
+    
+    // reach our end goal
+    if (r === n) { 
+      // format into output, not super important since it's just output specific stuff
       const index = res.length;
       res[index] = [];
       for (let i = 0; i < board.length; i++) {
@@ -36,9 +39,10 @@ const solveNQueens = (n) => {
 
     for (let c = 0; c < n; c++) {
       
-      const rc = r + c;
-      const rc2 = r - c;
+      const rc = r + c; // positive diagonal 
+      const rc2 = r - c; // neg diagonal 
       
+      // if r,c exists in any of the sets, then we cannot put a Queen there 
       if (col[c] || posDia[''+rc] || negDia[''+rc2]) {
         continue;
       }
@@ -50,6 +54,7 @@ const solveNQueens = (n) => {
       
       backtrack(r+1);
       
+      // make sure to wipe out previous sets' info in case there are multiple solutions 
       board[r][c] = '.';
       posDia[rc] = false;
       negDia[rc2] = false;
