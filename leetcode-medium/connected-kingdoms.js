@@ -31,6 +31,7 @@ const connectedKingdom = (graph, k1, k2) => {
     for (let neighbor of set[currKing]) {
       if (neighbor === k2) { // if we found our end goal kingdom 
         found = true;
+        break;
       }
       if (!visited[neighbor]) {
         visited[neighbor] = true;
