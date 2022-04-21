@@ -12,15 +12,17 @@ const exist = (board, word) => {
   
   const path = {}; // r,c as key; visited list
   
-  const dfs = (r, c, i) => {
-    if (i === word.length){
+  const dfs = (r, c, i) => { // i is the index of the current character in word
+    
+    // made it all the way to the end
+    if (i === word.length){ 
       return true;
     }
     
     const rowCol = r + ',' + c;
     
     if (r < 0 || c < 0 || r >= board.length || c >= board[0].length || 
-      board[r][c] !== word.charAt(i) || path[rowCol]) {
+      board[r][c] !== word.charAt(i) || path[rowCol]) { // if out of bounds OR board[r][c] !== word.charAt(i) OR visited
       return false;
     }
     
