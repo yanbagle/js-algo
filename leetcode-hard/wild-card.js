@@ -38,7 +38,7 @@ const isMatch = (s, p) => {
     
       this makes sense if you think about how if we encountred a '*' previously 
       then we are going to move lastMatched (which tracks the s string) forward along with sPointer 
-      and setting pPointer to the last star index found + 1 because we are moving p forward as well 
+      and setting pPointer to the last star index found + 1 because we want the pPointer to be where star was previously 
       
       */
       else if ( star !== -1 ) { 
