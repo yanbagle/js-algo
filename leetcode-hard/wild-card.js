@@ -1,50 +1,60 @@
-// https://leetcode.com/problems/wildcard-matching/
-
 /*
 
-#   Using the DFS to solve this problem 
-#   We have a string s abcd and pattern p a*c
-#   Each time we iterate s and p with pointer i and j when s[i] == p[j]
-#   if p[j] is star * which means p[j] can match a string here including empty string
-#   Therefore, first we assuming p[j] match empty then we keep moving two pointers until we cannot have matched part
-#   Then we came back to make let p[j] match s[i] so we keep moving two pointers from i+1 and j
-#   Repeat above steps until there is no more possible matches 
-#   we return false
+https://leetcode.com/problems/wildcard-matching/
+
+'?' Matches any single character.
+'*' Matches any sequence of characters (including the empty sequence).
 
 */
 
 const isMatch = (s, p) => {
-  let n = s.length;
-  let m = p.length;
-  let lastMatched = -1;
-  let star = -1;
-  let i = 0;
-  let j = 0;
+  let sLen = s.length;
+  let pLen = p.length;
+
+  let sPointer = 0;
+  let pPointer = 0;
   
-   while (i < n) {
-       if (j < m && (p.charAt(j) === s.charAt(i) || p.charAt(j) === '?')) {
-           i += 1;
-           j += 1;
-       }
-       else if (j < m && p.charAt(j) === '*' ) {
-           lastMatched = i;
-           star = j;
-           j += 1;     
-       }
-       else if ( star !== -1 ) {
-           i = lastMatched + 1;
-           lastMatched = i;
-           j = star + 1;
-       }
-       else {
-         return false;
-       }
-           
+  let lastMatched = -1; // last matched character in s string after encountering a '*' character
+  let star = -1; // purely keeps track of '*' character index in the p string
+  
+   while (sPointer < sLen) {
+     
+      // if characters match or it's a '?' so it can be anything, then we advance both s and p pointers 
+      if (pPointer < pLen && (p.charAt(pPointer) === s.charAt(sPointer) || p.charAt(pPointer) === '?')) {
+         sPointer += 1;
+         pPointer += 1;
+      }
+      
+      // if '*' then we set lastMatched and star to current pPointer 
+      else if (pPointer < pLen && p.charAt(pPointer) === '*' ) {
+         lastMatched = sPointer;
+         star = pPointer;
+         pPointer += 1;     
+      }
+      
+      /* 
+      
+      if star is NOT the initial value which means a '*' has been found
+    
+      this makes sense if you think about how if we encountred a '*' previously 
+      then we are going to move lastMatched (which tracks the s string) forward along with sPointer 
+      and setting pPointer to the last star index found + 1 because we are moving p forward as well 
+      
+      */
+      else if ( star !== -1 ) { 
+         lastMatched += 1; // lastMatched tracks the s string
+         sPointer = lastMatched; // move sPointer forward as well 
+         pPointer = star + 1; // set pPointer to the previous star index + 1
+      }
+      
+      else {
+       return false;
+      }   
   }
   
-  while (j < m && p.charAt(j) === '*' ) {
-     j += 1;
+  while (pPointer < pLen && p.charAt(pPointer) === '*' ) {
+     pPointer += 1;
   }
   
-  return j === m; 
+  return pPointer === pLen; 
 }
