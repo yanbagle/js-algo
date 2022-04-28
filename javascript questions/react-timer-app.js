@@ -6,7 +6,6 @@ const TimeCard = () => {
   const [minutes, setMinutes] = React.useState();
   const [hours, setHours] = React.useState();
 
-
   React.useEffect(() => {
     if (start) {
       setTimeout(() => {
