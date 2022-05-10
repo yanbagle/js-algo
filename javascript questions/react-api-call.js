@@ -1,24 +1,26 @@
-import { useEffect, useState } from 'react'
+import React from 'react';
+import { useEffect, useState } from 'react';
 
 export function App() {
-  const [query, setQuery] = useState('')
-  const [movies, setMovies] = useState([])
+  const [query, setQuery] = React.useState('');
+  const [movies, setMovies] = React.useState([]);
 
   useEffect(() => {
-    //console.log(query)
+      
+    const fetchMovies = async () => {
+      const res = await fetch(`https://www.omdbapi.com/?apikey=8fc6c84a&s=${query}`);
+      const json = await res.json();  
+      const {Search} = json;
+      if (Search && Search.length) {
+        setMovies(Search);
+      }
+      console.log(movies);
+    }  
+    
     if (query.length > 3) {
-      fetch('https://www.omdbapi.com/?apikey=8fc6c84a&s=' + query, {
-        method: 'GET',
-      })
-        .then((res) => {
-          return res.json()
-        })
-        .then((res) => {
-          //console.log(res)
-          if (res && res.Search && res.Search.length) {
-            setMovies(res.Search)
-          }
-        })
+      fetchMovies().catch(() => {
+        console.log('error');
+      });
     }
   }, [query])
 
