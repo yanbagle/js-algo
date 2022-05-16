@@ -42,7 +42,7 @@ export default function App() {
   const reset = () => {
     setPercentage(0);
   }
-
+ 
   return (
     <div className="App">
       <div className="LoadingBar">
