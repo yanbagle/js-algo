@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="myBtn">Click here to show date</button>
+
+<p id="demo"></p>
+
+<!----------------------------------------------------------------------------->
+<script>
+
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+// event bubbling / capturing
+var element1 = document.getElementsByClassName('element1')[0],
+     element2 = document.getElementsByClassName('element2')[0],
+     element3 = document.getElementsByClassName('element3')[0],
+     foo = function(e) { console.log(this.className); },
+     stop = function(e) { 
+         console.log('stop', this.className); 
+         e.stopPropagation();
+     };
+
+ element1.addEventListener('click', foo); // bubbling
+ //element1.addEventListener('click', foo, true); // caputring
+ // You cab change handler to "stop"
+ element2.addEventListener('click', stop); 
+ //element2.addEventListener('click', foo, true);
+ element3.addEventListener('click', foo);
+ //element3.addEventListener('click', foo, true);
+ 
+</script>
+<!----------------------------------------------------------------------------->
+
+</body>
+</html> 

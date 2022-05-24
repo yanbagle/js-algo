@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+  </head>
+  <body>  
+    <!--
+      Count the number of list items and and add a <p> tag to show the results.
+    --->
+    
+    <ul id="fruits">
+      <li>watermelon</li>
+      <li>peach</li>
+      <li>orange</li>
+    </ul>
+    <input type="button" onClick="count()" value="get list's count">
+    
+    <script>
+      const count = () => {
+        ul = document.getElementById('fruits');
+        const listItems = ul.getElementsByTagName('li');
+        
+        var div = document.createElement('div');
+        div.innerHTML = listItems.length;
+        document.body.appendChild(div);
+      } 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<!---
+  When a user brings mouse over the bold text it should be highlighted.
+--->
+<html> 
+  <head> 
+  </head>
+  <body>  
+    <p>
+      We have just <b>started</b> this <b>section</b> for the users 
+      (<b>beginner</b> to <b>intermediate</b>) who want to work with various 
+      <b>JavaScript</b> problems and write scripts online to test their 
+      <b>JavaScript</b> skill.
+    </p>
+
+    <script>
+      const highlight = (e) => {
+        e.style.color = 'green';
+      }
+      
+      const unHighlight = (e) => {
+        e.style.color = 'black';
+      }
+      
+      const boldElements = document.getElementsByTagName('b');
+      for (let i = 0; i < boldElements.length; i++) {
+        boldElements[i].addEventListener('mouseover', highlight.bind(null, boldElements[i]));
+        boldElements[i].addEventListener('mouseout', unHighlight.bind(null, boldElements[i]));
+      }      
+    </script>
+  </body>
+</html>
