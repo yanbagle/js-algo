@@ -96,5 +96,3 @@ const messages = ({inbox}) => {
     </div>
   );
 }
-
-const app = <div>Hello World!</div>
