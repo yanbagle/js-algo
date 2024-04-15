@@ -1,6 +1,6 @@
 // no chaining, no multiple promises
 class Promise {
-  constructor(handler) {
+  constructor(callback) {
     this.status = "pending";
     this.value = null;
     this.onFullFilledCb = null;
@@ -23,7 +23,7 @@ class Promise {
     };
 
     try {
-      handler(resolve, reject);
+      callback(resolve, reject);
     } catch (err) {
       reject(err);
     }
