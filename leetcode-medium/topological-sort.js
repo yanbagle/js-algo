@@ -5,7 +5,9 @@ class TopologicalSort {
     this.res = [];
   }
 
-  // e.g. depArr = [[A,B], [B, C], [A,D] ...]
+  // e.g. input = [[A,B], [B, C], [A,D] ...]
+  // convert arr to dep table {A: [B, D], B: [C], etc}
+  // key = node, value = list of deps
   buildDepGraph(depArr) {
     for (let dep of depArr) {
       const a = dep[0];
@@ -17,6 +19,7 @@ class TopologicalSort {
     }
   }
 
+  // loop thru every node in graph
   topologicalSort() {
     for (let ele in this.depGraph) {
       if (!this.visited[ele]) {
@@ -26,6 +29,9 @@ class TopologicalSort {
     return this.res;
   }
 
+  // for every node in graph, we loop thru its deps until we get to a node that has no deps
+  // the node with no deps will be the first node added to res []
+  // recursion will take us back to all the nodes and add them to the res []
   topologicalSortUtil(node) {
     this.visited[node] = true;
 
