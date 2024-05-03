@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+</style>
+<script src=""></script>
+<body>
+
+<div class="flag">
+  <div class="stars-container">
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+    <div class="fa fa-star white-star"></div>
+  </div>
+  <div class="stripes-container">
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+      <div class="stripes"></div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+// css 
+.flag {
+     background-color: white;
+     width: 500px;
+     height: 300px;
+     border-style: solid;
+     border-color: black;
+     position: relative;
+   }
+ 
+   .stars-container {
+     position: absolute;
+     background-color: blue;
+     width: 200px;
+     height: 163px;
+     padding-left: 15px;
+   }
+ 
+   .white-star {
+     color: white;
+     padding-bottom: 3px;
+   }
+ 
+   .stripes{
+     background-color: red;
+     width: 500px;
+     height: 25px;
+     margin-bottom: 21px;
+   }
