@@ -61,7 +61,6 @@ class LRU {
     if (this.cache[key]) {
       this.remove(this.cache[key]);
     }
-
     this.cache[key] = new Node(key, value);
     this.insert(this.cache[key]);
 
