@@ -13,7 +13,7 @@ const balanceParen = (str) => {
       stack.push(i);
     } else if (str[i] === ")") {
       if (!stack.length) {
-        // stack should be empty whenever we encounter an open paren, if not we save the index to be removed
+        // stack should be empty whenever we encounter a close paren, if not we save the index to be removed
         removeIndices[i] = true;
       } else {
         stack.pop();
