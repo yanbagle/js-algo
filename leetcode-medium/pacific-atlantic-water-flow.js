@@ -19,7 +19,7 @@ Output: [[0,0],[0,1],[1,0],[1,1]]
 /*
   Instead of brute force and doing a dfs on every single element in heights,
   we start off from the edge rows and cols bordering the atlantic/pacific oceans 
-  because we know for sure those elements can reach the ocean.
+  because we know for sure those elements can reach its neighboring ocean.
   From there, we do a dfs on the neighboring elements as we traverse through. 
   We keep a visited set for elements that can reach Pacific/Atlantic, and returning only what is in both sets 
 */
