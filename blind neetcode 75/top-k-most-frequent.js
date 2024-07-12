@@ -5,7 +5,7 @@ const topKFrequent = (nums, k) => {
     freqMap[n] = freqMap[n] ? freqMap[n] + 1 : 1;
   }
   // convert freq map into an array with each ele in its corresponding freq index
-  // e.g. if 2 appears 3 times, 1 is under index 3 in freqArr => [[], [], [], [2]]
+  // e.g. if 2 appears 3 times, then 2 is under index 3 in freqArr => [[], [], [], [2]]
   const freqArr = [];
   for (let n in freqMap) {
     const freq = freqMap[n];
