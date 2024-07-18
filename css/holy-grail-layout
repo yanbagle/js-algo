@@ -1,0 +1,76 @@
+export default function App() {
+  return (
+    <>
+      <header>Header</header>
+      <div class="columns">
+        <nav>Navigation</nav>
+        <main>Main</main>
+        <aside>Sidebar</aside>
+      </div>
+      <footer>Footer</footer>
+    </>
+  );
+}
+
+body {
+     font-family: sans-serif;
+     font-size: 12px;
+     font-weight: bold;
+     margin: 0;
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   
+   header,
+   nav,
+   main,
+   aside,
+   footer {
+     padding: 12px;
+   }
+   
+   #root {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+   }
+   
+   // both footer and header have fixed height 
+   // the content in the middle will use flex-grow: 1
+   // same concept with the nav bar and side bar
+   // both will have a fixed width
+   // and the main content in the middle will user flex-grow: 1
+
+   header {
+     background-color: tomato;
+     height: 100px;
+   }
+      
+   footer {
+     background-color: slategray;
+     height: 100px;
+   }
+   
+   .columns {
+     display: flex;
+     flex-grow: 1;
+   }
+   
+   nav {
+     background-color: coral;
+     width: 100px;
+   }
+   
+   main {
+     flex-grow: 1;
+     background-color: moccasin;
+   }
+   
+   aside {
+     background-color: sandybrown;
+     width: 100px;
+   }
+
+   
