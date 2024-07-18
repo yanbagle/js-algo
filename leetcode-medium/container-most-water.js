@@ -11,8 +11,8 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
 */
 
 const maxArea = (heights) => {
-  let l = heights[0];
-  let r = heights[heights.length - 1];
+  let l = 0;
+  let r = heights.length - 1;
   let maxArea = 0;
 
   while (l < r) {
