@@ -20,9 +20,7 @@ export default function throttle(func, wait = 0) {
     }
 
     shouldThrottle = true;
-    setTimeout(function () {
-      shouldThrottle = false;
-    }, wait);
+    setTimeout(() => (shouldThrottle = false), wait);
 
     func.apply(this, args);
   };
