@@ -38,7 +38,7 @@ body {
    }
    
    // both footer and header have fixed height 
-   // the content in the middle will use flex-grow: 1
+   // the columns in the middle will use flex-grow: 1
    // same concept with the nav bar and side bar
    // both will have a fixed width
    // and the main content in the middle will user flex-grow: 1

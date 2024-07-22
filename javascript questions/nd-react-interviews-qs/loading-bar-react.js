@@ -21,7 +21,7 @@ export default function App() {
           percentage++;
           if (percentage === 100) {
             clearInterval(id);
-          } 
+          }
           return percentage;
         });
       }, 100);
@@ -33,20 +33,23 @@ export default function App() {
 
   const pauseTimer = () => {
     setPause(true);
-  }
+  };
 
   const resumeTimer = () => {
     setPause(false);
-  }
+  };
 
   const reset = () => {
     setPercentage(0);
-  }
- 
+  };
+
   return (
     <div className="App">
       <div className="LoadingBar">
-        <div className="LoadingBar" style={{width: `${percentage}%` }} > {percentage}% </div>
+        <div className="LoadingBar" style={{ width: `${percentage}%` }}>
+          {" "}
+          {percentage}%{" "}
+        </div>
       </div>
       <button onClick={pauseTimer}>pause</button>
       <button onClick={resumeTimer}>resume</button>
