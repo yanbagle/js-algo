@@ -7,7 +7,7 @@ const minEatingSpeed = (piles, h) => {
   // r being the max of piles will the be worst case result
   // k is the rate of bananas eaten per hour (the middle pointer in the regular binary search algo)
   while (l <= r) {
-    const k = Math.floor(l + r / 2);
+    const k = Math.floor((l + r) / 2);
     let hours = 0; // calculate how many hours it will take to consume all the piles at a rate of k bananas per hour
     for (let p of piles) {
       // each loop is seeing how many bananas we can eat at the rate of k bananas per hour
